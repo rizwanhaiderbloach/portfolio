@@ -42,14 +42,14 @@ a{color:inherit;text-decoration:none;}
 
 .section{padding:48px 0;}
 .grid{display:grid;gap:18px;}
-.skills{grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap:15px;}
+.skills{grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:15px;}
 .projects{grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap:15px;}
 
 .card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:18px;box-shadow: 0 4px 14px rgba(0,0,0,0.25);}
 .card h3{margin-top:0;}
 .project .links{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px;}
 
-.contact-grid{display:grid;grid-template-columns: 0.8fr 1.2fr;gap:18px;}
+.contact-grid{display:grid;grid-template-columns: 1fr 1fr; gap:18px;}
 .form label{display:block;margin-bottom:8px;font-weight:600;}
 .form input,.form textarea{width:100%;margin-top:4px;padding:10px;border-radius:8px;border:1px solid var(--border);background:#0f1530;color:var(--text);}
 .note{color:var(--muted);margin-top:8px;}
@@ -58,44 +58,20 @@ a{color:inherit;text-decoration:none;}
 
 /* Responsive adjustments */
 @media (max-width: 900px) {
-  /* Hero section adjustments */
-  .hero-inner {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-  .hero-card {
-    margin-top: 20px;
-  }
+  .container { width: 100% !important; padding-left:16px; padding-right:16px; margin-inline:0; }
+  body { overflow-x:hidden; }
 
-  /* Skills and projects grids */
-  .skills, .projects {
-    grid-template-columns: 1fr;
-    gap: 15px;
-  }
+  .hero-inner { grid-template-columns: 1fr; gap:20px; }
+  .hero-card { margin-top:20px; }
 
-  /* Contact grid */
-  .contact-grid {
-    grid-template-columns: 1fr;
-    gap: 15px;
-  }
+  .skills { grid-template-columns: 1fr; gap:15px; }
+  .projects { grid-template-columns: 1fr; gap:15px; }
 
-  /* Navigation adjustments */
-  .nav {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .menu {
-    margin-top: 10px;
-  }
+  .contact-grid { grid-template-columns: 1fr; gap:15px; }
 
-  /* Fix right side space issue */
-  .container {
-    width: 100% !important;   
-    padding-left: 16px;
-    padding-right: 16px;
-    margin-inline: 0;
-  }
-  body {
-    overflow-x: hidden;       
-  }
+  .nav { flex-direction: column; align-items:flex-start; }
+  .menu { margin-top:10px; }
+
+  .menu a{width:100%; text-align:center;} /* Nav links full width on mobile for balance */
 }
+

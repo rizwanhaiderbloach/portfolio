@@ -57,12 +57,44 @@ a{color:inherit;text-decoration:none;}
 .footer{border-top:1px solid var(--border);padding:18px 0;color:var(--muted);text-align:center;}
 
 /* Responsive adjustments */
-@media (max-width: 900px){
-  .hero-inner{grid-template-columns: 1fr; gap:20px;}
-  .skills{grid-template-columns: 1fr 1fr; gap:15px;}
-  .projects{grid-template-columns: 1fr; gap:15px;}
-  .contact-grid{grid-template-columns: 1fr; gap:15px;}
-  .hero-card{margin-top:20px;}
-  .nav{flex-direction:column;align-items:flex-start;}
-  .menu{margin-top:10px;}
+@media (max-width: 900px) {
+  /* Hero section adjustments */
+  .hero-inner {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .hero-card {
+    margin-top: 20px;
+  }
+
+  /* Skills and projects grids */
+  .skills {
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+  }
+  .projects {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  /* Contact grid */
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  /* Navigation adjustments */
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .menu {
+    margin-top: 10px;
+  }
+
+  /* Fix right side space issue */
+  .container {
+    width: 100%;
+    padding-inline: 16px;
+  }
 }
